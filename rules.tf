@@ -42,6 +42,11 @@ variable "rules" {
     elasticsearch-rest-tcp = [9200, 9200, "tcp", "Elasticsearch REST interface"]
     elasticsearch-java-tcp = [9300, 9300, "tcp", "Elasticsearch Java interface"]
 
+    # FTP/SFTP
+    ftp-20-tcp      = [20, 20, "tcp", "FTP"]
+    ftp-21-tcp      = [21, 21, "tcp", "SFTP"]
+    ftp-passive-tcp = [50000, 50500, "tcp", "FTP Passive"]
+
     # HTTP
     http-80-tcp   = [80, 80, "tcp", "HTTP"]
     http-8080-tcp = [8080, 8080, "tcp", "HTTP"]
@@ -177,6 +182,12 @@ variable "auto_groups" {
 
     elasticsearch = {
       ingress_rules     = ["elasticsearch-rest-tcp", "elasticsearch-java-tcp"]
+      ingress_with_self = ["all-all"]
+      egress_rules      = ["all-all"]
+    }
+
+    ftp = {
+      ingress_rules     = ["ftp-20-tcp", "ftp-21-tcp", "ftp-passive-tcp"]
       ingress_with_self = ["all-all"]
       egress_rules      = ["all-all"]
     }
