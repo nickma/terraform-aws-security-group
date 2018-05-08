@@ -7,6 +7,7 @@ List of Security Groups implemented as Terraform modules
 * [consul](https://github.com/terraform-aws-modules/terraform-aws-security-group/tree/master/modules/consul)
 * [docker-swarm](https://github.com/terraform-aws-modules/terraform-aws-security-group/tree/master/modules/docker-swarm)
 * [elasticsearch](https://github.com/terraform-aws-modules/terraform-aws-security-group/tree/master/modules/elasticsearch)
+* [ftp](https://github.com/terraform-aws-modules/terraform-aws-security-group/tree/master/modules/ftp)
 * [http-80](https://github.com/terraform-aws-modules/terraform-aws-security-group/tree/master/modules/http-80)
 * [https-443](https://github.com/terraform-aws-modules/terraform-aws-security-group/tree/master/modules/https-443)
 * [ipsec-4500](https://github.com/terraform-aws-modules/terraform-aws-security-group/tree/master/modules/ipsec-4500)
