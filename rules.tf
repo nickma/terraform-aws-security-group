@@ -156,29 +156,6 @@ variable "auto_groups" {
 
   # Valid keys - ingress_rules, egress_rules, ingress_with_self, egress_with_self
   default = {
-    carbon-relay-ng = {
-      ingress_rules     = ["carbon-line-in-tcp", "carbon-line-in-udp", "carbon-pickle-tcp", "carbon-pickle-udp", "carbon-gui-udp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
-    cassandra = {
-      ingress_rules     = ["cassandra-clients-tcp", "cassandra-thrift-clients-tcp", "cassandra-jmx-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
-    consul = {
-      ingress_rules     = ["consul-tcp", "consul-webui-tcp", "consul-dns-tcp", "consul-dns-udp", "consul-serf-lan-tcp", "consul-serf-lan-udp", "consul-serf-wan-tcp", "consul-serf-wan-udp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
-    docker-swarm = {
-      ingress_rules     = ["docker-swarm-mngmt-tcp", "docker-swarm-node-tcp", "docker-swarm-node-udp", "docker-swarm-overlay-udp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
 
     elasticsearch = {
       ingress_rules     = ["elasticsearch-rest-tcp", "elasticsearch-java-tcp"]
@@ -216,20 +193,8 @@ variable "auto_groups" {
       egress_rules      = ["all-all"]
     }
 
-    kafka = {
-      ingress_rules     = ["kafka-broker-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
     ldaps = {
       ingress_rules     = ["ldaps-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
-    memcached = {
-      ingress_rules     = ["memcached-tcp"]
       ingress_with_self = ["all-all"]
       egress_rules      = ["all-all"]
     }
@@ -240,38 +205,14 @@ variable "auto_groups" {
       egress_rules      = ["all-all"]
     }
 
-    mssql = {
-      ingress_rules     = ["mssql-tcp", "mssql-udp", "mssql-analytics-tcp", "mssql-broker-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
     nfs = {
       ingress_rules     = ["nfs-tcp"]
       ingress_with_self = ["all-all"]
       egress_rules      = ["all-all"]
     }
 
-    nomad = {
-      ingress_rules     = ["nomad-http-tcp", "nomad-rpc-tcp", "nomad-serf-tcp", "nomad-serf-udp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
-    openvpn = {
-      ingress_rules     = ["openvpn-udp", "openvpn-tcp", "openvpn-https-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
     postgresql = {
       ingress_rules     = ["postgresql-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
-    oracle-db = {
-      ingress_rules     = ["oracle-db-tcp"]
       ingress_with_self = ["all-all"]
       egress_rules      = ["all-all"]
     }
@@ -288,38 +229,14 @@ variable "auto_groups" {
       egress_rules      = ["all-all"]
     }
 
-    redshift = {
-      ingress_rules     = ["redshift-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
-    splunk = {
-      ingress_rules     = ["splunk-indexer-tcp", "splunk-clients-tcp", "splunk-splunkd-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
     ssh = {
       ingress_rules     = ["ssh-tcp"]
       ingress_with_self = ["all-all"]
       egress_rules      = ["all-all"]
     }
 
-    storm = {
-      ingress_rules     = ["storm-nimbus-tcp", "storm-ui-tcp", "storm-supervisor-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
     web = {
       ingress_rules     = ["http-80-tcp", "http-8080-tcp", "https-443-tcp", "web-jmx-tcp"]
-      ingress_with_self = ["all-all"]
-      egress_rules      = ["all-all"]
-    }
-
-    zipkin = {
-      ingress_rules     = ["zipkin-admin-tcp", "zipkin-admin-query-tcp", "zipkin-admin-web-tcp", "zipkin-query-tcp", "zipkin-web-tcp"]
       ingress_with_self = ["all-all"]
       egress_rules      = ["all-all"]
     }
